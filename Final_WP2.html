@@ -1,0 +1,362 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hamsters</title>
+  
+    <style type="text/css">
+  
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+			   v2.0 | 20110126
+			   License: none (public domain)
+			*/
+
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+		
+	/*==============END CSS RESET==============*/
+  
+	/*==============color scheme==============*/
+	/*
+	green shade - #D8E2DC
+	dark pink shade - #9D8189
+	pink - #F4ACB7
+	light pink - #FFCAD4
+	reddish shade - #ef233c
+	*/
+	
+		body{
+			background-color: #9D8189;
+		}
+		
+		header{
+			background-color: #FFCAD4;
+			padding: 3%;
+		}
+		
+		#wrapper{
+			width: 80.56640625%;/*825/1024*/
+			margin: 0 auto;
+			background-color: #D8E2DC;
+		}
+		nav{
+			margin: 0 auto;
+			padding: 1% 0; 
+			background-color: #F4ACB7;
+		}
+		
+		nav ul{
+			width: 85.57575757575758%; /*706/825*/
+			margin: 0 auto;
+		}
+		
+		nav ul li{
+			display: inline;
+			margin-right: 2%;
+		}
+		
+		nav a {
+			text-decoration: none;
+		}
+		
+		nav a:link{
+			color: red;
+		}
+			
+		nav a:visited{
+			color: #9D8189;
+		}
+			
+		nav a:hover{
+			color: white;
+			background-color: #ef233c;
+		}
+			
+		nav a:active{
+			color: black;
+		}
+		
+		#feature{
+			width: 81.32575757575758%; /*706/825*/
+			margin: 3% auto 4% auto;
+			padding: 1.5% 2.25% 3.5% 2.25%;
+			background-color: white;
+			overflow: hidden;
+		}
+		
+		/*==============type styles==============*/
+		
+		/*
+		font-family: "Gowun Batang", system-ui;
+		font-family: "Nunito Sans", sans-serif;
+		font-family: "Nunito", sans-serif;
+		*/
+		
+		body{
+			font-family: "Gowun Batang", system-ui;
+		}
+		
+		article>p{
+			line-height: 130%
+		}
+		
+		.feature-text{
+			float: left;
+			width: 58%;
+			margin-left: 2%;
+			font-family: "Nunito", sans-serif;
+			font-size: 1.333em;
+			font-weight: bold;
+			line-height: 125%;
+			letter-spacing: .05em;
+		}
+		
+		h1, h2, h3, h4, h5, h6{
+			font-family: "Nunito Sans", sans-serif;
+			color: #ef233c;
+			letter-spacing: .05em;
+		}
+		
+		h1{
+			font-size: 2em;
+			font-weight: bold;
+		}
+		
+		h2{
+			font-size: 1.75em;
+			font-weight: bold;
+		}
+		
+		.feature-img{
+			float: left;
+			width: 40%;
+		}
+		
+		#main-content{
+			width: 59.39393939393939%;/*523/825*/
+			float: left;
+			margin: 2%;
+		}
+		
+		.main-figure{
+			width: 32.50478011472275%;/*170/523*/
+			margin-right: 9.56022944550669%;/*50/523*/
+			float: right;
+		}
+		
+		#sidebar{
+			width: 32.60606060606061%;/*302/825*/
+			float: left;
+			margin: 2%;
+		}
+		
+		.side-figure{
+			width: 88.0794701986755%;/*266/302*/
+			margin: 0 auto;
+			padding: bottom: 2%;
+		}
+		
+		figure img{
+			max-width: 100%;
+		}
+		
+		figure{
+			background-color: #b0d0d3;
+		}
+		
+		footer{
+			clear: left;
+			padding: 1%;
+		}
+		
+		/*type styles*/
+		#feature h2{
+			margin-bottom: 2%;
+		}
+		
+		footer p{
+			margin: 0;
+			padding: 2%;
+		}
+		
+		p{
+			margin: 2.5% 0;
+		}
+		
+		figcaption{
+			font-family: "Nunito Sans", sans-serif;
+			margin: 3%; 
+		}
+		
+		#sidebar figcaption{
+			margin-bottom: 3%
+		}
+		
+		#list1{
+			background-color: #b0d0d3;
+			width: 47%;
+			padding: 1.5%;
+			float: left;
+		}
+		
+		#list2{
+			background-color: #b0d0d3;
+			width: 47%;
+			padding: 1.5%;
+			float: right;
+		}
+		
+		ul.a{
+			list-style-type: square;
+			padding: 2%;
+		}
+		
+  </style>
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>All About Hamsters</h1>
+		</header>
+
+<nav>
+	<ul>
+		<li><a href="index.html">Wild Hamsters</a></li>
+		<li id="active"><a href="Final_WP2.html" id="current">Syrian Hamsters</a></li>
+		<li><a href="Final_WP3.html">Dwarf Hamsters</a></li>
+		<li><a href="Final_WP4.html">Hamster Anatomy</a></li>
+		<li><a href="Final_WP5.html">Other Info</a></li>
+	</ul>
+</nav>
+
+<div id="main-content">
+	<article>
+		<h2>Syrian Hamsters</h2>
+		<figure class="main-figure">
+					<img src="https://cdn.shopify.com/s/files/1/0424/4606/1723/files/Syrian-Hamster_grande.jpg?v=1594383125" />
+					<figcaption>
+						<p>Syrian Hamster</p>
+					</figcaption>
+		</figure>
+		
+		<p>
+			Syrian Hamsters originated from Syria. In 1930, there was a zoologist by the name of Israel Aharoni who went to Syria and bred Syrian hamsters in captivity for the first time ever. The first domesticaton of Syrian hamsters brought to the United States was in 1938. They are known to live in warm, dry habitats like sand dunes, rocky area, and steppes.
+		</p>
+		<p>
+			There are over twenty species of hamsters today and five out of the twenty are domesticated. Syrian hamsters' scientific name is Mesocricetus Auratus. They are the largest domesticated species. They grow up to five to seven inches long and weigh from about 120 to 200 grams. Like all hamsters, Syrian hamsters are solitary animals and are very territorial.
+		</p>
+		<p>
+			When bothered, nervous or afraid, a Hamster will bite you. Syrian Hamster's bites are strong and can punture the skin barrier. Syrian hamsters can also recognize voices and smells. Syrian Hamsters coems in a variety of colors and patterns. The hamster pictured on the left is a Fancy Bear Hamster.
+		</p>
+	</article>
+	<article>
+		<h2>Traits, Colors and Patterns</h2>
+		<p>
+			Syrian hamsters comes in a variety of colors and patterns. A Syrian hamster can also be either long haired or short haired, just like cats! There are five different kinds of hamsters that are differentiated in the Syrian hamster group. Based on the name, you could probably imagine how they would look like. Some Syrian hamster colors are black, cinnamon, grey, gold and so on.
+		</p>
+		<p>
+			Strong bonds can be formed with a Syrian hamster and its owner. They are usually easy to tame and have great temperment although, every hamster is different. Although they can create a strong bond with their owner, they often do not like being held for long periods of time as they like to exercise a lot. They can run up to five miles a day.
+		</p>
+		<p>
+			Hamsters have a great sense of smell. They are more prone to using their smelling senses with their whiskers and scent glands that is located by their hips. Hamsters do not have great eyesight and are nocturnal creatures. They may sleep upwards from twelve to fourteen hours a day. Out of the five domesticated hamster breeds, Syrian hamsters are the most popular species for a pet.
+		</p>
+	</article>
+</div>
+
+<div id="sidebar">
+		<article>
+		<h2>Oreo</h2>
+			<figure class="side-figure">
+				<img src="oreo.jpg" />
+				<figcaption>
+					<p>My Pet Hamster Oreo</p>
+				</figcaption>
+			</figure>
+			<p>
+				In 2021, I bought a Syrian hamster from Petco. At this time, I was very unknowledgeable about hamsters and only wanted one because my sister had some. I reckon she would've let me kept one of hers as her hamster had birthed half a dozen of babies but she lived in California.
+			</p>
+			<p>
+				My hamster Oreo lived for over two years. I originally wanted a different color hamster and pattern but they only had panda hamsters. I really just wanted a pet so out of the dozen of panda hamsteres there were, I picked out Oreo. You can't really see, but Oreo had a banded pattern hence the name Oreo.
+			</p>
+			<p>
+				I remember the first time he had escaped and I lost him for a few days. I did some research about hamsters and was very worried when I found out that they can survive up to only three or four days without food. I left his enclosure open and waited for him. At night, I woke up from something walking on me. I quickly got up and caught him, placing him back in his enclosure. But like I said, this wasn't his first time escaping... he eventually always came back. 
+			</p>
+		</article>
+</div>
+
+<div id="list1">
+		<h3>Types of Syrian Hamsters:</h3>
+		<ul class="a">
+			<li>Golden Hamster</li>
+			<li>Teddy Bear Hamster</li>
+			<li>Black Bear Hamster</li>
+			<li>Panda Bear Hamster</li>
+			<li>Fancy Bear Hamster</li>
+		</ul>
+</div>
+<div id="list2">
+		<h3>Patterns of Syrian Hamsters:</h3>
+		<ul class="a">
+			<li>Solid</li>
+			<li>Banded</li>
+			<li>Tortoise Shell</li>
+			<li>Golden</li>
+			<li>Long Haired</li>
+		</ul>
+</div>
+	<footer>
+		<p align="center"><small>Kellie Vang - Copyrights 2024</small></p>
+	</footer>
+</div>
+
+</body>
+</html>

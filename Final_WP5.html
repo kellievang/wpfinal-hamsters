@@ -1,0 +1,428 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hamsters</title>
+  
+  <style type="text/css">
+  
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+			   v2.0 | 20110126
+			   License: none (public domain)
+			*/
+
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+		
+	/*==============END CSS RESET==============*/
+  
+	/*==============color scheme==============*/
+	/*
+	green shade - #D8E2DC
+	dark pink shade - #9D8189
+	pink - #F4ACB7
+	light pink - #FFCAD4
+	reddish shade - #ef233c
+	*/
+	
+		body{
+			background-color: #9D8189;
+		}
+		
+		header{
+			background-color: #FFCAD4;
+			padding: 3%;
+		}
+		
+		#wrapper{
+			width: 80.56640625%;/*825/1024*/
+			margin: 0 auto;
+			background-color: #D8E2DC;
+		}
+		nav{
+			margin: 0 auto;
+			padding: 1% 0; 
+			background-color: #F4ACB7;
+		}
+		
+		nav ul{
+			width: 85.57575757575758%; /*706/825*/
+			margin: 0 auto;
+		}
+		
+		nav ul li{
+			display: inline;
+			margin-right: 2%;
+		}
+		
+		nav a {
+			text-decoration: none;
+		}
+		
+		nav a:link{
+			color: red;
+		}
+			
+		nav a:visited{
+			color: #9D8189;
+		}
+			
+		nav a:hover{
+			color: white;
+			background-color: #ef233c;
+		}
+			
+		nav a:active{
+			color: black;
+		}
+		
+		#feature{
+			width: 81.32575757575758%; /*706/825*/
+			margin: 3% auto 4% auto;
+			padding: 1.5% 2.25% 3.5% 2.25%;
+			background-color: white;
+			overflow: hidden;
+		}
+		
+		/*==============type styles==============*/
+		
+		/*
+		font-family: "Gowun Batang", system-ui;
+		font-family: "Nunito Sans", sans-serif;
+		font-family: "Nunito", sans-serif;
+		*/
+		
+		body{
+			font-family: "Gowun Batang", system-ui;
+		}
+		
+		article>p{
+			line-height: 130%
+		}
+		
+		.feature-text{
+			float: left;
+			width: 58%;
+			margin-left: 2%;
+			font-family: "Nunito", sans-serif;
+			font-size: 1.333em;
+			font-weight: bold;
+			line-height: 125%;
+			letter-spacing: .05em;
+		}
+		
+		h1, h2, h3, h4, h5, h6{
+			font-family: "Nunito Sans", sans-serif;
+			color: #ef233c;
+			letter-spacing: .05em;
+		}
+		
+		h1{
+			font-size: 2em;
+			font-weight: bold;
+		}
+		
+		h2{
+			font-size: 1.75em;
+			font-weight: bold;
+		}
+		
+		h3{
+			font-weight: bold;
+			padding: 2% 0;
+		}
+		
+		.feature-img{
+			float: left;
+			width: 40%;
+		}
+		
+		#main-content{
+			width: 56.39393939393939%;/*523/825*/
+			float: left;
+			margin: 2%;
+		}
+		
+		.main-figure{
+			width: 34.50478011472275%;/*170/523*/
+			margin-right: 9.56022944550669%;/*50/523*/
+			float: right;
+		}
+		
+		.links a{
+			text-decoration: none;
+			color: black;
+		}
+		
+		ul.a{
+			list-style-type: square;
+			padding: 2%;
+		}
+		
+		#sidebar{
+			width: 32.60606060606061%;/*302/825*/
+			float: left;
+			margin: 2%;
+		}
+		
+		.side-figure{
+			width: 88.0794701986755%;/*266/302*/
+			margin: 0 auto;
+			padding: bottom: 2%;
+		}
+		
+		figure img{
+			max-width: 100%;
+		}
+		
+		figure{
+			background-color: #b0d0d3;
+		}
+		
+		footer{
+			clear: left;
+			padding: 1%;
+		}
+		
+		/*type styles*/
+		#feature h2{
+			margin-bottom: 2%;
+		}
+		
+		footer p{
+			margin: 0;
+			padding: 2%;
+		}
+		
+		p{
+			margin: 2.5% 0;
+		}
+		
+		figcaption{
+			font-family: "Nunito Sans", sans-serif;
+			margin: 3%; 
+		}
+		
+		#sidebar figcaption{
+			margin-bottom: 3%
+		}
+		
+		td {
+			border:3px solid #9D8189;
+			border-right:none;
+			border-bottom:none;
+		}
+
+		td:nth-last-child(1){
+			border-right:3px solid #9D8189;
+		}
+
+		table {
+			border-bottom:3px solid #9D8189; 
+			padding: 2%;
+		}
+		
+		table, caption{
+		
+		}
+	
+		thead{
+			background-color: #D8E2DC;
+			border:3px solid #9D8189;
+			border-right:3px solid #9D8189;
+			border-bottom:none;
+		}
+		
+		th{
+			border:3px solid #9D8189;
+			border-right:none;
+			border-bottom:none;
+			padding: 1%;
+		}
+	
+		tbody{
+			background-color: #D8E2DC;
+		}
+		
+		img{
+			width: auto;
+		}
+	
+		caption{
+			background-color: #D8E2DC;
+			border:3px solid #9D8189;
+			border-right:3px solid #9D8189;
+			border-bottom:none;
+			padding: 1.2%;
+		}
+		
+  </style>
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>All About Hamsters</h1>
+		</header>
+<nav>
+	<ul>
+		<li><a href="index.html">Wild Hamsters</a></li>
+		<li><a href="Final_WP2.html">Syrian Hamsters</a></li>
+		<li><a href="Final_WP3.html">Dwarf Hamsters</a></li>
+		<li><a href="Final_WP4.html">Hamster Anatomy</a></li>
+		<li id="active"><a href="Final_WP5.html" id="current">Other Info</a></li>
+	</ul>
+</nav>
+
+<center>
+	<table border="1">
+		<caption>
+			<strong>Length of Hamsters</strong>
+		</caption>
+		<thead>
+			<tr>
+				<th width="36.5%">European Hamster</th>
+				<th width="35%">Syrian Hamster</th>
+				<th width="35%">Dwarf Hamster</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><center><img src="europeanham.jpg" height="150"/></center></td>
+				<td><center><img src="syrianham.jpg" height="150"/></center></td>
+				<td><center><img src="dwarfham.jpg" height="150"/></center></td>
+			</tr>
+			<tr>
+				<td>
+					8-14 inches 
+				</td>
+				<td>
+					5-9 inches 
+				</td>
+				<td>
+					2-4 inches 
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</center>
+
+<div id="main-content">
+	<article>
+		<h2>Needs</h2>
+			<p>
+				You may not keep a European Hamster as a pet. In the wild, European hamsters live underground in burrows underground. They make a series of tunnels to store food. The series of tunnels can also be called a chamber. In the wild, hamsters were found to be living the closest proximity of 118 meters.
+			</p>
+			<p>
+				A hamster enclosure is best recommended using an aquarium tank. It'll give you a good option of adding different platforms and styles to your enclosure as well. An enclosure should be around 800 square feet and around forty inches tall. Hamsters need this much space to be stimulated and living in a healthy habitat.
+			</p>
+			<p>
+				Hamsters like to burrow so to give them a good feel of their natural habitat, you should buy paper beddings, aspen, spruce or hemp shavings. This will allow the hamster to create their burrows and tunnels. Hamsters like to dig deep so it is recommended to use a lot of bedding.
+			</p>
+			<p>
+				Hamsters should have a hamster wheel that is big enough for them. Dwarf hamsters should have a wheel that is at least ten inches tall. As for the Syrian Hamster, they should have a wheel that is at least thirteen inches. Hamsters need sand and a sand bath container as they do not bathe in water. Water will damage their fur!
+			</p>
+			<p>
+				Like every animal, a hamster will need a food bowl and water. Like other rodents, a hamster will be fine with a no drip water bottle and it is recommended to be changed daily. You should also check your hamster's water daily to check for any blockage and to prevent any contamination. As I have stated before, hamsters have large incisors that need caring. It is best that you buy them things to chew on to wear down those teeth. 
+			</p>
+	</article>
+	
+<article>
+	<h2>Solitary</h2>
+		<p>
+			It is important that Hamsters are solitary animals! Unlike Guinea Pigs, hamsters should live alone. The only time they should be together is when they are mating, they are still babies and when a mother is weaning them. In the video below, it shows two Dwarf hamsters fighting. The original poster shows that there are babies in the hideout. It is not good that the two adult hamsters are still together in this case as you can see.
+		</p>
+		<figure>
+			<center>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/zpZD2WhFDd0?si=MJPwcy6nwyimohMV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+				</iframe>
+			</center>
+		</figure>
+</article>
+<div class="links">
+<article>
+	<h3>Links to Resources:</h3>
+		<ul class="a">
+			<li><a href="https://www.rachelgothamsters.com/my-hamsters" target="blank">Rachel Got Hamsters</a></li>
+			<li><a href="https://www.thehamingway.com/" target="blank">the hammingway</a></li>
+			<li><a href="https://www.rspca.org.uk/adviceandwelfare/pets/rodents/hamsters/environment" target="blank">RSPCA</a></li>
+			<li><a href="https://www.hamstercentral.com/" target="blank">Hamster Central</a></li>
+		</ul>
+</article>
+</div>
+</div>
+
+<div id="sidebar">
+	<h2>Understanding Your Hamster</h2>
+		<p>
+			Hamsters have a variety of emotions and you can understand them. A lot of animals show emotions differently. For example, when a dog is happy, they will wag their tail back and forth. When a cat is unhappy, they will shake their tail back and forth. This is why it is important to understand an animal. By the end of this reading, you will know when a hamster is angry, happy or even learning to understand what they are doing with their body language.
+		</p>
+		<p>
+			When a hamster hisses or scream, they are agitated and angry. Do not palce your fingers anywhere near them as they will be ready to bite. If a hamster chatters their teeth, they are also unhappy. 
+		</p>
+		<p>
+			A hamster's mating call may be them squeaking. When female hamsters lay low with their tails up, staying in one position, they are also in the mating position. Like dogs, when they stop and move their ears around, they are trying to hear something and understand what they have heard or their surrounding. This can go the same as them scratching themselves with their back legs and hamsters licking you as an affection.
+		</p>
+		<p>
+			I previously wrote about hamsters needing the right amount of habitual place. If a hamster's need is not met properly, they can grow agitated. A hamster who lives in an enclosure with bars may continuously bite at the bars to "escape". Hamsters may also climb on their cages, using the bars to grip onto.
+		</p>
+		
+	<figure>
+		<center><img src="https://ars.els-cdn.com/content/image/3-s2.0-B9780123809209000365-f36-02-9780123809209.jpg" />
+		<img src="http://rikyhamstery.com/images/k.dzungarsky3.JPG" /><figcaption>The top photo is a Wild Hamster and a Syrian Hamster. The bottom photo consists of the Syrian Hamster and a Dwarf hamster.</figcaption></center>
+	</figure>
+</div>
+
+<footer>
+	<p align="center"><small>Kellie Vang - Copyrights 2024</small></p>
+</footer>
+</body>
+</html>

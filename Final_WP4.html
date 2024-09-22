@@ -1,0 +1,334 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hamsters</title>
+  
+  <style type="text/css">
+  
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+			   v2.0 | 20110126
+			   License: none (public domain)
+			*/
+
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			
+			body {
+				line-height: 1;
+			}
+			
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+		
+	/*==============END CSS RESET==============*/
+  
+	/*==============color scheme==============*/
+	/*
+	green shade - #D8E2DC
+	dark pink shade - #9D8189
+	pink - #F4ACB7
+	light pink - #FFCAD4
+	reddish shade - #ef233c
+	*/
+	
+		body{
+			background-color: #9D8189;
+		}
+		
+		header{
+			background-color: #FFCAD4;
+			padding: 3%;
+		}
+		
+		#wrapper{
+			width: 80.56640625%;/*825/1024*/
+			margin: 0 auto;
+			background-color: #D8E2DC;
+		}
+		nav{
+			margin: 0 auto;
+			padding: 1% 0; 
+			background-color: #F4ACB7;
+		}
+		
+		nav ul{
+			width: 85.57575757575758%; /*706/825*/
+			margin: 0 auto;
+		}
+		
+		nav ul li{
+			display: inline;
+			margin-right: 2%;
+		}
+		
+		nav a {
+			text-decoration: none;
+		}
+		
+		nav a:link{
+			color: red;
+		}
+			
+		nav a:visited{
+			color: #9D8189;
+		}
+			
+		nav a:hover{
+			color: white;
+			background-color: #ef233c;
+		}
+			
+		nav a:active{
+			color: black;
+		}
+		
+		#feature{
+			width: 81.32575757575758%; /*706/825*/
+			margin: 3% auto 4% auto;
+			padding: 1.5% 2.25% 3.5% 2.25%;
+			background-color: white;
+			overflow: hidden;
+		}
+		
+		/*==============type styles==============*/
+		
+		/*
+		font-family: "Gowun Batang", system-ui;
+		font-family: "Nunito Sans", sans-serif;
+		font-family: "Nunito", sans-serif;
+		*/
+		
+		body{
+			font-family: "Gowun Batang", system-ui;
+		}
+		
+		article>p{
+			line-height: 130%
+		}
+		
+		.feature-text{
+			float: left;
+			width: 58%;
+			margin-left: 2%;
+			font-family: "Nunito", sans-serif;
+			font-size: 1.333em;
+			font-weight: bold;
+			line-height: 125%;
+			letter-spacing: .05em;
+		}
+		
+		h1, h2, h3, h4, h5, h6{
+			font-family: "Nunito Sans", sans-serif;
+			color: #ef233c;
+			letter-spacing: .05em;
+		}
+		
+		h1{
+			font-size: 2em;
+			font-weight: bold;
+		}
+		
+		h2{
+			font-size: 1.75em;
+			font-weight: bold;
+			padding: 0 .5%; 
+		}
+		
+		h3{
+			font-weight: bold;
+			padding: 0 1%;
+		}
+		
+		.feature-img{
+			float: left;
+			width: 40%;
+		}
+		
+		#content1{
+			width: 46%;
+			float: left;
+			margin: 2%;
+		}
+		
+		.main-figure{
+			width: 32.50478011472275%;/*170/523*/
+			margin-right: 9.56022944550669%;/*50/523*/
+			float: right;
+		}
+		
+		#content2{
+			width: 46%;
+			float: left;
+			margin: 2%;
+		}
+		
+		.side-figure{
+			width: 88.0794701986755%;/*266/302*/
+			margin: 0 auto;
+			padding: bottom: 2%;
+		}
+		
+		figure img{
+			max-width: 100%;
+		}
+		
+		figure{
+			background-color: #b0d0d3;
+		}
+		
+		footer{
+			clear: left;
+			padding: 1%;
+		}
+		
+		/*type styles*/
+		#feature h2{
+			margin-bottom: 2%;
+		}
+		
+		footer p{
+			margin: 0;
+			padding: 2%;
+		}
+		
+		p{
+			margin: 2.5% 0;
+			padding: 0 1%;
+		}
+		
+		figcaption{
+			font-family: "Nunito Sans", sans-serif;
+			margin: 3%; 
+		}
+		
+		#sidebar figcaption{
+			margin-bottom: 3%
+		}
+		
+		ol{
+			padding: 2% 5%;
+		}
+		
+  </style>
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>All About Hamsters</h1>
+		</header>
+		
+		<nav>
+			<ul>
+		<li><a href="index.html">Wild Hamsters</a></li>
+		<li><a href="Final_WP2.html">Syrian Hamsters</a></li>
+		<li><a href="Final_WP3.html">Dwarf Hamsters</a></li>
+		<li id="active"><a href="Final_WP4.html" id="current">Hamster Anatomy</a></li>
+		<li><a href="Final_WP5.html">Other Info</a></li>
+	</ul>
+</nav>
+
+<div id="content1">
+	<article>
+		<h2>Syrian Hamster</h2>
+		<p>
+			<figure>
+				<a href="https://www.hamstersociety.sg/hamster-care-blog/2019/6/18/identifying-gender">
+				<img src="https://images.squarespace-cdn.com/content/v1/5c28e5b38f51304e8d700f89/1560823893637-F33ZSEBIYIGZ4PEW01OE/syrian+gender.png?format=2500w" /></a>
+				<figcaption>Diagram of Syrian Hamster</figcaption>
+			</figure>
+		</p>
+		<p>
+			In the photo shown above, it shows the location of a male and female's sexual anatomy to differentiate them. Unlike the Dwarf Hamster, these hamsters are missing where their scent glands are located. Their scent glands can be found at their hips. All hamsters have them but they are more visible on male hamsters. 
+		</p>		
+	</article>
+</div>
+<div id="content2">
+	<article>
+		<h2>Dwarf Hamster</h2>
+		<p>
+			<figure>
+				<a href="https://www.hamstersociety.sg/hamster-care-blog/2019/6/18/identifying-gender">
+				<img src="https://images.squarespace-cdn.com/content/v1/5c28e5b38f51304e8d700f89/1560823890276-JY3KENEGAH7VMNZLBU6X/dwarf+gender.jpg?format=2500w" /></a>
+				<figcaption>Diagram of Dwarf Hamster</figcaption>
+			</figure>
+		</p>
+		<p>
+			In the photo above, a male hamster is shown to have a scent gland above his penis. Like all hamsters, both male and female hamsters have scent glands. While Syrian hamsters have them on their hips, both male and female dwarves have them near their belly. Female scent glands are very small and hard to see.
+		</p>
+	</article>
+</div>
+
+<article>
+	<h2>More About Hamsters</h2>
+		<p>
+			As you can see in both photos, Syrian Hamsters and Dwarf Hamsters look different. I wrote about the size and shape differences of the two on previous pages. Here you can visually see that both hamsters look different. Syrian Hamsters are much bigger and longer. Dwarf Hamsters are much smaller and more round shaped. While a mother Dwarf hamster can birth up to a fifteen babies, a Syrian hamster can birth up to twenty four in total. Although this is the case, they both usually average around six to eight pups a litter. The average litter of a Wild Hamster is eight to twelve pups.
+		</p>
+		<p>
+			Hamsters do not have great eyesight and are colorblind. Their eyes have three layers of eyelids and are made up of 3% cone cells and 97% rod cells. They mainly see colors on the green spectrum. In this case, they are more dependant to using their whiskers and scent glands and have very sensitive hearing. They also have sharp incisors that continuously grow throughout their lives like other rodents so if you do ever have a hamster, make sure they have plenty of things to chew on. Talking about their dependability on their scent glands, they also use them to mark territory as well.
+		</p>
+</article>
+
+<article>
+	<h3>My Top Five:</h3>
+		<ol>
+			<li>Syrian Hamster</li>
+			<li>Winter White Hamster</li>
+			<li>Chinese Hamster</li>
+			<li>Campbell's Hamster</li>
+			<li>Roborovski Hamster</li>
+		</ol>
+</article>
+
+<article>
+	<h2>Why</h2>
+	<p>
+		I put Syrian Hamsters at one because I already owned a Hamster before and really loved caring for him a lot. A big reason why I would choose a Syrian is because of their size. They aren't too small so if they were to ever escape, it will be easier to catch them. Oreo was very fun, nice and smart and I would choose another Syrian Hamster over any of the Dwarf species. I placed the Winter White hamster at second because if I were to ever get one, they would be my seond option. They are more easibly tamed than the Campbell and if I want a pet, I would want to be able to play with them from time to time. I placed Robovorski hamsters last because of it's skittish nature and due it being harder to tame. 
+	</p>
+</article>
+
+<footer>
+	<p align="center"><small>Kellie Vang - Copyrights 2024</small></p>
+</footer>
+</body>
+</html>

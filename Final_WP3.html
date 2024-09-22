@@ -1,0 +1,356 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hamsters</title>
+  
+ <style type="text/css">
+  
+	/* http://meyerweb.com/eric/tools/css/reset/ 
+			   v2.0 | 20110126
+			   License: none (public domain)
+			*/
+
+			html, body, div, span, applet, object, iframe,
+			h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+			a, abbr, acronym, address, big, cite, code,
+			del, dfn, em, img, ins, kbd, q, s, samp,
+			small, strike, strong, sub, sup, tt, var,
+			b, u, i, center,
+			dl, dt, dd, ol, ul, li,
+			fieldset, form, label, legend,
+			table, caption, tbody, tfoot, thead, tr, th, td,
+			article, aside, canvas, details, embed, 
+			figure, figcaption, footer, header, hgroup, 
+			menu, nav, output, ruby, section, summary,
+			time, mark, audio, video {
+				margin: 0;
+				padding: 0;
+				border: 0;
+				font-size: 100%;
+				font: inherit;
+				vertical-align: baseline;
+			}
+			/* HTML5 display-role reset for older browsers */
+			article, aside, details, figcaption, figure, 
+			footer, header, hgroup, menu, nav, section {
+				display: block;
+			}
+			
+			body {
+				line-height: 1;
+			}
+			ol, ul {
+				list-style: none;
+			}
+			blockquote, q {
+				quotes: none;
+			}
+			blockquote:before, blockquote:after,
+			q:before, q:after {
+				content: '';
+				content: none;
+			}
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+			}
+		
+	/*==============END CSS RESET==============*/
+  
+	/*==============color scheme==============*/
+	/*
+	green shade - #D8E2DC
+	dark pink shade - #9D8189
+	pink - #F4ACB7
+	light pink - #FFCAD4
+	reddish shade - #ef233c
+	*/
+	
+		body{
+			background-color: #9D8189;
+		}
+		
+		header{
+			background-color: #FFCAD4;
+			padding: 3%;
+		}
+		
+		#wrapper{
+			width: 80.56640625%;/*825/1024*/
+			margin: 0 auto;
+			background-color: #D8E2DC;
+		}
+		nav{
+			margin: 0 auto;
+			padding: 1% 0; 
+			background-color: #F4ACB7;
+		}
+		
+		nav ul{
+			width: 85.57575757575758%; /*706/825*/
+			margin: 0 auto;
+		}
+		
+		nav ul li{
+			display: inline;
+			margin-right: 2%;
+		}
+		
+		nav a {
+			text-decoration: none;
+		}
+		
+		nav a:link{
+			color: red;
+		}
+			
+		nav a:visited{
+			color: #9D8189;
+		}
+			
+		nav a:hover{
+			color: white;
+			background-color: #ef233c;
+		}
+			
+		nav a:active{
+			color: black;
+		}
+		
+		#feature{
+			width: 81.32575757575758%; /*706/825*/
+			margin: 3% auto 4% auto;
+			padding: 1.5% 2.25% 3.5% 2.25%;
+			background-color: white;
+			overflow: hidden;
+		}
+		
+		/*==============type styles==============*/
+		
+		/*
+		font-family: "Gowun Batang", system-ui;
+		font-family: "Nunito Sans", sans-serif;
+		font-family: "Nunito", sans-serif;
+		*/
+		
+		body{
+			font-family: "Gowun Batang", system-ui;
+		}
+		
+		article>p{
+			line-height: 130%
+		}
+		
+		.feature-text{
+			float: left;
+			width: 58%;
+			margin-left: 2%;
+			font-family: "Nunito", sans-serif;
+			font-size: 1.333em;
+			font-weight: bold;
+			line-height: 125%;
+			letter-spacing: .05em;
+		}
+		
+		h1, h2, h3, h4, h5, h6{
+			font-family: "Nunito Sans", sans-serif;
+			color: #ef233c;
+			letter-spacing: .05em;
+		}
+		
+		h1{
+			font-size: 2em;
+			font-weight: bold;
+		}
+		
+		h2{
+			font-size: 1.75em;
+			font-weight: bold;
+		}
+		
+		.feature-img{
+			float: left;
+			width: 40%;
+		}
+		
+		#main-content{
+			width: 59.39393939393939%;/*523/825*/
+			float: left;
+			margin: 2%;
+		}
+		
+		.main-figure{
+			width: 32.50478011472275%;/*170/523*/
+			margin-right: 9.56022944550669%;/*50/523*/
+			float: right;
+		}
+		
+		#sidebar{
+			width: 32.60606060606061%;/*302/825*/
+			float: left;
+			margin: 2%;
+		}
+		
+		.side-figure{
+			width: 88.0794701986755%;/*266/302*/
+			margin: 0 auto;
+			padding: bottom: 2%;
+		}
+		
+		/*++++++++blockquotes++++++++*/
+			
+			blockquote{
+				font-size: 1.5em;
+				font-family: serif;
+				line-height: 1.5em;
+				margin: 4% 0 4% 6%
+				background-color: #b0d0d3;
+				padding: 2%;
+				border-left: 10px solid #F4ACB7;
+				color: #B5838D;
+			}
+
+			blockquote:before{
+				vertical-align: -.35em;
+				line-height: 0;
+				font-size: 4em;
+				content: "\201C";
+			}
+		
+		figure img{
+			max-width: 100%;
+		}
+		
+		figure{
+			background-color: #b0d0d3;
+		}
+		
+		footer{
+			clear: left;
+			padding: 1%;
+		}
+		
+		/*type styles*/
+		#feature h2{
+			margin-bottom: 2%;
+		}
+		
+		footer p{
+			margin: 0;
+			padding: 2%;
+		}
+		
+		p{
+			margin: 2.5% 0;
+		}
+		
+		figcaption{
+			font-family: "Nunito Sans", sans-serif;
+			margin: 3%; 
+		}
+		
+		#sidebar figcaption{
+			margin-bottom: 3%
+		}
+		
+  </style>
+  
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>All About Hamsters</h1>
+		</header>
+		
+<nav>
+	<ul>
+		<li><a href="index.html">Wild Hamsters</a></li>
+		<li><a href="Final_WP2.html">Syrian Hamsters</a></li>
+		<li id="active"><a href="Final_WP3.html" id="current">Dwarf Hamsters</a></li>
+		<li><a href="Final_WP4.html">Hamster Anatomy</a></li>
+		<li><a href="Final_WP5.html">Other Info</a></li>
+	</ul>
+</nav>
+
+<div id="main-content">
+	<article>
+		<h2>Chinese Hamsters</h2>
+		<p>
+			The scientific name for a Chinese Hamster is the Cricetulus Barabenis. The Chinese hamsters weigh around thirty to fifty grams and are about three and a half to five inches long in length. Chinese hamsters are originated from the deserts in Northern China and Mongolia.
+		</p>
+		<blockquote>
+			There are four different types of Dwarf hamster breeds that are domesticated. Although these four are considered Dwarf hamsters, there are only one out of the four that is actually considered a Dwarf Hamster. That is the Chinese Hamster.
+		</blockquote>
+		<p>
+			Out of the five domesticted hamsters, the Chineses hamster has the longest tail that grow up to an inch long. They are also great climbers compared to the other hamsters as well. Chineses Hamsters are considered as pests and exotic. A few US states require a special permit to sell, own and breed them. This is led to Chinese hamsters being the least common domesticated breed. The Chinese hamsters are the honly hamsters with hairless paws.
+		</p>
+		<p>
+			Chinese hamsters resembles a mouse more than a hamster. They are known to have hereditary diabetes and was used for researching. They are also known to be used for genetic research due to their low chromosomes (22 chromosomes). Although mice and rats are more commonly used in labs today, Chinese hamsters are still being used to this day. They are used for their ovary cells in creating protein for biotech drugs, helping treat human diseases.
+		</p>
+	</article>
+	
+	<article>
+		<h2>Roborovski Hamsters</h2>
+		<p>
+			Roborovski Hamsters are the most recently domesicated hamsters. They came to the United States in 1998. They grow up to two and a half to three inches long and can weight up to twenty to forty grams. At birth, they are averaged at two centimeters long only. Their sceintific name is the Phodopus Robovorski. 
+		</p>
+		<p>
+			Roborvoski's are known to have sandy, brown fur although they can come in multiple colors as well such as the Syrian hamster. They are also known for their eyebrows that comes in at a patch of white fur just above their eyes.
+		</p>
+		<p>
+			Their origin is from Russia, China and Mongolia. They live in dry and sandy areas. They are the hardest species of hamsters to be tamed and are very skittish. Out of all hamsters, the Roborvoski hamsters are the fastest. Unlike the Syrian hamster, Roborovski hamsters do not hibernate.
+		</p>
+	</article>
+	<article>
+			<h2>Winter White Hamsters</h2>
+				<p>
+					The Winter White hamster is known as the Djungarian hamster as well as the Siberian Dwarf Hamster. It's scientific name is Phodopus Sungorus. The are around three and a half inches long and weigh about thiry to sixty grams. They can live up to a year old in the ild but up to three years in captivity.
+				</p>
+				<p>
+					The Winter White hamsters are less likely to bite and have more of a tolerant personality than Campbell's hamsters. They are usually round shaped and are half the size of Syrian hamsters. These hamsters have furry feet unlike the Chinese hamster and have very small ears.
+				</p>
+				<p>
+					Winter Whites got their name due to being able to change their coat colors from dark to white in the winter which can help them from predators. They are less prone to change colors in captivity because their coats only changing colors due to the daylight times. They are often found in farmlands, meadows, forests and grasslands. 
+				</p>
+			</article>
+</div>
+<div id="sidebar">
+			<article>
+			<h2>Campbell's Dwarf Hamster</h2>
+				<p>
+					Their name is founded by a man by the name of "Charles William Campbell". He was the first to collect this species in Mongolia in 1902. The Campbell's Dwarf Hamster's scientific name is Phodopus Campbell. They are also known as the Russian Dwarf Hamster and Russian Campbell's Hamster. Many have mistaked the Campbell's Dwarf Hamsters to be the Winter White Hamsters up until 1984.
+				</p>
+				<p>
+					They have a long dark stripe along their back and have ears more similar to a mouses ear. They also weigh about thirty to sixty grams and are around three inches long in length. They are originated from China, Central Asia and Russia. They became domesticated in the United States in the 1980s. Unlike other hamsters, they are more prone to being active during the day although they are still nocturnal creatures.
+				</p>
+			</article>
+			<article>
+			<h2>Hybrid Hamsters</h2>
+				<p>
+					There are only two species of hamsters that can interbreed with one another. The Winter White hamsters and the Campbell's hamsters. This is because of the mistake that they were assumed to be of the same species. Like I stated before, the Campbell's hamsters were mistaken with Winter White hamsters. Their choromosomes are quite similar.
+				</p>
+				<p>
+					These two species are different which can lead to them having difficulty in reproduction. Some of their health problems are diabetes and neurological issues that can lead to having uncontrollable head-tilts, backflipping and spinning around. This leads them to have a shorter lifespan.
+				</p>
+			</article>
+			<figure>
+				<img src="hamspoon.gif" />
+				<figcaption>Dwarf Hamster on a Spoon</figcaption>
+			</figure>
+		</div>
+	<footer>
+		<p align="center">
+			<small>Kellie Vang - Copyrights 2024</small>
+		</p>
+	</footer>
+</div>
+
+</body>
+</html>
